@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Study Planner ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+            <div class="logo-icon">♡</div>
+
+            <div>
+                <h1>STUDY PLANNER</h1>
+                <p>Plan it. Study it. Achieve it. ✨</p>
+            </div>
+        </div>
+
+
+        <nav>
+
+            <button class="menu active" data-page="beranda">
+                🏠 Beranda
+            </button>
+
+            <button class="menu" data-page="jadwal">
+                📚 Jadwal
+            </button>
+
+            <button class="menu" data-page="tugas">
+                📝 Tugas
+            </button>
+
+            <button class="menu" data-page="timer">
+                ⏰ Timer
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+
+
+        <!-- ================= BERANDA ================= -->
+
+        <section id="beranda" class="page active">
+
+            <div class="hero">
+
+                <div class="hero-text">
+
+                    <p class="small-title">
+                        WELCOME BACK, BESTIE! 🌷
+                    </p>
+
+                    <h2>
+                        Semangat belajar hari ini! ♡
+                    </h2>
+
+                    <p>
+                        Atur jadwal, selesaikan tugas,
+                        dan jangan lupa istirahat.
+                    </p>
+
+                </div>
+
+
+                <div class="hero-decoration">
+                    🌸
+                </div>
+
+            </div>
+
+
+            <!-- STATISTIK -->
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="card-top">
+                        <div class="card-icon pink">
+                            📚
+                        </div>
+                    </div>
+
+                    <p>Total Jadwal</p>
+
+                    <h3 id="jumlahJadwal">
+                        0
+                    </h3>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-top">
+                        <div class="card-icon purple">
+                            📝
+                        </div>
+                    </div>
+
+                    <p>Total Tugas</p>
+
+                    <h3 id="jumlahTugas">
+                        0
+                    </h3>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-top">
+                        <div class="card-icon green">
+                            🌷
+                        </div>
+                    </div>
+
+                    <p>Tugas Selesai</p>
+
+                    <h3 id="jumlahSelesai">
+                        0
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK ACTION -->
+
+            <div class="content-card">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="small-title">
+                            LET'S START ✨
+                        </p>
+
+                        <h3>
+                            Mau belajar apa hari ini?
+                        </h3>
+                    </div>
+
+                    <span class="heading-icon">
+                        🎀
+                    </span>
+
+                </div>
+
+
+                <p class="description">
+                    Tambahkan jadwal dan tugas sekolahmu
+                    supaya kegiatan belajar lebih teratur.
+                </p>
+
+
+                <div class="quick-buttons">
+
+                    <button
+                        class="primary"
+                        data-page="jadwal"
+                    >
+                        📚 Tambah Jadwal
+                    </button>
+
+                    <button
+                        class="secondary"
+                        data-page="tugas"
+                    >
+                        📝 Tambah Tugas
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= JADWAL ================= -->
+
+        <section id="jadwal" class="page">
+
+            <div class="page-title">
+
+                <div>
+
+                    <p class="small-title">
+                        MY SCHEDULE 🌸
+                    </p>
+
+                    <h2>
+                        Jadwal Belajar
+                    </h2>
+
+                    <p>
+                        Atur waktu belajar kamu dengan rapi.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary"
+                    id="tambahJadwal"
+                >
+                    ＋ Tambah Jadwal
+                </button>
+
+            </div>
+
+
+            <div
+                id="daftarJadwal"
+                class="list"
+            ></div>
+
+        </section>
+
+
+
+        <!-- ================= TUGAS ================= -->
+
+        <section id="tugas" class="page">
+
+            <div class="page-title">
+
+                <div>
+
+                    <p class="small-title">
+                        MY TASKS 🎀
+                    </p>
+
+                    <h2>
+                        Daftar Tugas
+                    </h2>
+
+                    <p>
+                        Jangan sampai ada tugas yang terlupa.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary"
+                    id="tambahTugas"
+                >
+                    ＋ Tambah Tugas
+                </button>
+
+            </div>
+
+
+            <div
+                id="daftarTugas"
+                class="list"
+            ></div>
+
+        </section>
+
+
+
+        <!-- ================= TIMER ================= -->
+
+        <section id="timer" class="page">
+
+            <div class="timer-section">
+
+                <p class="small-title">
+                    FOCUS TIME ♡
+                </p>
+
+                <h2>
+                    Timer Belajar
+                </h2>
+
+                <p>
+                    Fokus selama 25 menit, lalu jangan lupa istirahat.
+                </p>
+
+
+                <div class="timer-box">
+
+                    <div class="timer-decoration">
+                        ✿
+                    </div>
+
+                    <div
+                        id="timerDisplay"
+                        class="timer-display"
+                    >
+                        25:00
+                    </div>
+
+
+                    <p id="timerStatus">
+                        Siap untuk belajar? 🌷
+                    </p>
+
+
+                    <div class="timer-buttons">
+
+                        <button
+                            class="primary"
+                            id="mulaiTimer"
+                        >
+                            ▶ Mulai
+                        </button>
+
+                        <button
+                            class="secondary"
+                            id="resetTimer"
+                        >
+                            ↻ Reset
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= MODAL JADWAL ================= -->
+
+    <div
+        class="modal"
+        id="modalJadwal"
+    >
+
+        <div class="modal-box">
+
+            <button
+                class="close"
+                data-close="modalJadwal"
+            >
+                ×
+            </button>
+
+
+            <div class="modal-title">
+                <span>📚</span>
+
+                <div>
+                    <h3>Tambah Jadwal</h3>
+                    <p>Isi jadwal belajarmu ♡</p>
+                </div>
+            </div>
+
+
+            <form id="formJadwal">
+
+                <label>
+                    Mata Pelajaran
+                </label>
+
+                <input
+                    type="text"
+                    id="mapel"
+                    placeholder="Contoh: Matematika"
+                    required
+                >
+
+
+                <label>
+                    Hari
+                </label>
+
+                <select id="hari" required>
+
+                    <option value="">
+                        Pilih hari
+                    </option>
+
+                    <option>Senin</option>
+                    <option>Selasa</option>
+                    <option>Rabu</option>
+                    <option>Kamis</option>
+                    <option>Jumat</option>
+                    <option>Sabtu</option>
+                    <option>Minggu</option>
+
+                </select>
+
+
+                <label>
+                    Jam
+                </label>
+
+                <input
+                    type="time"
+                    id="jam"
+                    required
+                >
+
+
+                <label>
+                    Materi
+                </label>
+
+                <input
+                    type="text"
+                    id="materi"
+                    placeholder="Contoh: Persamaan Kuadrat"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    class="primary full"
+                >
+                    💗 Simpan Jadwal
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= MODAL TUGAS ================= -->
+
+    <div
+        class="modal"
+        id="modalTugas"
+    >
+
+        <div class="modal-box">
+
+            <button
+                class="close"
+                data-close="modalTugas"
+            >
+                ×
+            </button>
+
+
+            <div class="modal-title">
+                <span>📝</span>
+
+                <div>
+                    <h3>Tambah Tugas</h3>
+                    <p>Catat tugasmu di sini ♡</p>
+                </div>
+            </div>
+
+
+            <form id="formTugas">
+
+                <label>
+                    Nama Tugas
+                </label>
+
+                <input
+                    type="text"
+                    id="namaTugas"
+                    placeholder="Contoh: Makalah Sejarah"
+                    required
+                >
+
+
+                <label>
+                    Mata Pelajaran
+                </label>
+
+                <input
+                    type="text"
+                    id="mapelTugas"
+                    placeholder="Contoh: Sejarah"
+                    required
+                >
+
+
+                <label>
+                    Deadline
+                </label>
+
+                <input
+                    type="date"
+                    id="deadline"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    class="primary full"
+                >
+                    💗 Simpan Tugas
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- NOTIFIKASI -->
+
+    <div
+        id="notifikasi"
+        class="notifikasi"
+    >
+        Berhasil! ♡
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
